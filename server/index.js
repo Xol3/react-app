@@ -9,7 +9,7 @@ var app = express();
 app.use(bodyParser.json()); // transform an obj into a json
 app.use(bodyParser.urlencoded({extended: false}));
 
-// this will connect to directory public in root, public will have an index.html, to an html file
+// this will connect to directory public in root, public will have an index.html, to an html file, connecting the front end to server
 app.use(express.static(path.join(__dirname, '../public')))
 
 // / refers to the root, in case is unable to connect to the public path will give a hello world meaning server works, is like a test to know server is running
